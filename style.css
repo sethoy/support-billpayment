@@ -1,0 +1,325 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ body {
+    font-family: 'Monda', sans-serif;
+    background-color: #f5f5f5;
+}
+
+/* Hero Section Container */
+.hero-section {
+    background-color: #311c2a; /* Dark plum background */
+    color: #ffffff;
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    padding: 60px 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+/* Content Side (Left) */
+.content-side {
+    flex: 1;
+    max-width: 550px;
+}
+
+/* Logo Design */
+.logo {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.logo-box {
+    border-top: 1px solid #ffffff;
+    border-left: 1px solid #ffffff;
+    border-right: 1px solid #ffffff;
+    padding: 5px 15px 2px 15px;
+    font-weight: 700;
+    font-size: 1.5rem;
+    letter-spacing: -0.5px;
+}
+
+.logo-sub {
+    font-size: 0.65rem;
+    letter-spacing: 4px;
+    font-weight: 600;
+    margin-top: 4px;
+    position: relative;
+}
+
+/* Adding the little wing lines next to "ADVISOR" to match image */
+.logo-sub::before, .logo-sub::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 25px;
+    height: 1px;
+    background-color: #ffffff;
+}
+.logo-sub::before { right: 100%; margin-right: 8px; }
+.logo-sub::after { left: 100%; margin-left: 8px; }
+
+
+/* Typography */
+.main-heading {
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 1.3;
+    margin-bottom: 25px;
+}
+
+.description {
+    font-size: 1.05rem;
+    line-height: 1.6;
+    color: #e0d4dd; /* Light soft tint of the background color */
+    margin-bottom: 35px;
+}
+
+/* Register Button */
+.btn-register {
+    display: inline-block;
+    background-color: #216a4e; /* Emerald green */
+    color: #ffffff;
+    text-decoration: none;
+    padding: 12px 50px;
+    border-radius: 30px; /* Fully rounded capsule style */
+    font-weight: 600;
+    font-size: 1.05rem;
+    transition: background-color 0.2s ease;
+}
+
+.btn-register:hover {
+    background-color: #1a543e;
+}
+
+/* Image Side (Right) */
+.image-side {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* Recreating the asymmetric border frame style */
+.image-wrapper {
+    border: 4px solid #ffffff;
+    padding: 0px;
+    border-top-left-radius: 100px;
+    border-bottom-right-radius: 100px;
+    border-top-right-radius: 12px;
+    border-bottom-left-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    max-width: 520px;
+    width: 100%;
+}
+
+.image-wrapper img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+}
+
+/* Responsive Layout for Tablets/Mobile */
+@media (max-width: 991px) {
+    .container {
+        flex-direction: column;
+        text-align: left;
+        gap: 50px;
+    }
+    
+    .content-side, .image-side {
+        max-width: 100%;
+        width: 100%;
+    }
+    
+    .image-side {
+        justify-content: center;
+    }
+    
+    .main-heading {
+        font-size: 2.1rem;
+    }
+}
+/* Paste this into your style.css file */
+
+.form-container {
+  font-family: Arial, sans-serif;
+  max-width: 600px;
+  margin: 50px auto;
+  color: #4a3b3e; /* Matches the dark maroon/brown text color */
+}
+
+.form-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.form-header h2 {
+  font-size: 26px;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.form-header h1 {
+  font-size: 42px;
+  margin-top: 0;
+  font-weight: 700;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 14px;
+  color: #555;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"] {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #dcdcdc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 16px;
+  outline: none;
+}
+
+.form-group input:focus {
+  border-color: #999;
+}
+
+.required {
+  color: #d93025; /* Standard red for required asterisks */
+}
+
+.checkbox-group {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 30px;
+  font-size: 12px;
+  color: #666;
+  position: relative;
+}
+
+.checkbox-group input[type="checkbox"] {
+  margin-top: 4px;
+  margin-right: 10px;
+}
+
+.checkbox-text {
+  line-height: 1.5;
+  flex: 1;
+  padding-right: 15px; /* Leaves space for the required asterisk on the right */
+}
+
+.checkbox-group .required {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.submit-btn-container {
+  text-align: center;
+}
+
+.submit-btn {
+  background-color: #2e7d5b; /* Matches the green button color */
+  color: #ffffff;
+  border: none;
+  border-radius: 30px;
+  padding: 14px 60px;
+  font-size: 18px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.2s ease;
+}
+
+.submit-btn:hover {
+  background-color: #246348;
+}
+/* --- Footer Styles --- */
+
+.site-footer {
+  background-color: #35222c; /* Matches the dark maroon background */
+  color: #ffffff;
+  padding: 20px 0;
+  font-family: Arial, sans-serif;
+  margin-top: 50px; /* Gives some space below the form */
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40px;
+}
+
+.footer-copyright {
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.footer-links {
+  display: flex;
+  align-items: center;
+  gap: 30px; /* Controls the spacing between the links */
+}
+
+.footer-links a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.footer-links a:hover {
+  opacity: 0.8; /* Slight fade effect on hover */
+}
+
+.footer-links .btn-data {
+  background-color: #2e7d5b; /* Matches the green from the subscribe button */
+  padding: 10px 16px;
+  border-radius: 4px;
+  font-weight: 500; /* Slightly thinner text weight for the button */
+}
+
+.footer-links .btn-data:hover {
+  background-color: #246348;
+  opacity: 1; /* Prevents the fade effect on the button */
+}
+
+/* Make it responsive for smaller screens */
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+  
+  .footer-links {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
